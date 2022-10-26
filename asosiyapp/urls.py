@@ -8,6 +8,8 @@ urlpatterns = [
     path('bolim/<str:nom>/', BolimIchkiView.as_view(), name='bolim_ichki'),
     path('listing/<int:pk>/',GridView.as_view(),name = 'grid'),
 
+
+
     path('detail/<int:pk>/',PageDetailView.as_view(),name = 'detail'),
 
 ]

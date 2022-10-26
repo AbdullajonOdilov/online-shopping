@@ -1,8 +1,10 @@
 from django.shortcuts import render,redirect
 from django.views import View
-from django.db.models import Count
+
 from .models import *
-# Create your views here.
+from userapp.models import *
+from buyurtmaapp.models import *
+
 
 class Home2View(View):
     def get(self, request):
@@ -48,13 +50,7 @@ class PageDetailView(View):
             'mahsulotlar':Mahsulot.objects.get(id=pk)
         }
         return render(request, 'page-detail-product.html',context)
-class TanlanganView(View):
-    def get(self,request):
-        return render(request,'page-profile-wishlist.html')
 
-class SavatView(View):
-    def get(self,request):
-        return render(request,'page-shopping-cart.html')
 class BuyurmaView(View):
     def get(self,request):
         return render(request,'page-profile-orders.html')

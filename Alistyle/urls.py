@@ -9,4 +9,5 @@ urlpatterns = [
     path('', Home2View.as_view(), name='home2'),
     path('asosiy/', include('asosiyapp.urls')),
     path('user/', include('userapp.urls')),
+    path('profile/', include('buyurtmaapp.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
